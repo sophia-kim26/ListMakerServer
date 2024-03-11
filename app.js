@@ -8,6 +8,12 @@ app.listen( port, () => {
     console.log(`App server listening on ${ port }. (Go to http://localhost:${ port })` );
 } );
 
+// define middleware that logs all incoming requests
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.url}`);
+    next();
+} );
+
 // define a route for the default home page
 app.get( "/", ( req, res ) => {
     res.sendFile( __dirname + "/views/index.html" );
@@ -21,6 +27,11 @@ app.get( "/list", ( req, res ) => {
 // define a route for the list detail page
 app.get( "/list/details", ( req, res ) => {
     res.sendFile( __dirname + "/views/details.html" );
+} );
+
+// define a route for the create page
+app.get( "/create", ( req, res ) => {
+    res.sendFile( __dirname + "/views/create.html" );
 } );
 
 // ended at 2.3.3
