@@ -16,21 +16,25 @@ app.use((req, res, next) => {
 
 // define a route for the default home page
 app.get( "/", ( req, res ) => {
+    console.log("GET /");
     res.sendFile( __dirname + "/views/index.html" );
 } );
 
 // define a route for the main list page
 app.get( "/list", ( req, res ) => {
+    console.log("GET /list");
     res.sendFile( __dirname + "/views/list.html" );
 } );
 
 // define a route for the list detail page
 app.get( "/list/details", ( req, res ) => {
+    console.log("GET /list/details");
     res.sendFile( __dirname + "/views/details.html" );
 } );
 
 // define a route for the create page
 app.get( "/create", ( req, res ) => {
+    console.log("GET /create");
     res.sendFile( __dirname + "/views/create.html" );
 } );
 
