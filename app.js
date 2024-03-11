@@ -1,3 +1,5 @@
+const logger = require("morgan");
+
 // set up the server
 const express = require( "express" );
 const app = express();
@@ -10,7 +12,9 @@ app.listen( port, () => {
 
 // define middleware that logs all incoming requests
 app.use((req, res, next) => {
-    console.log(`${req.method} ${req.url}`);
+    app.use(logger("dev"));
+    // define middleware that serves static resources in the public directory
+    app.use(express.static(__dirname + '/public'));
     next();
 } );
 
