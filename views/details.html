@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Maker</title>
+
+    <!-- Materialize CSS and Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Additional custom CSS -->
+    <!-- <style>
+        form {
+            border: solid 2px pink;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        form:focus-within {
+            border-color: pink;
+        }
+
+        tr:hover {
+            background-color: lightpink;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <!-- Nav bar: Reference: https://materializecss.com/navbar.html -->
+    <!-- It is the same navbar as index.html (I just copy pasted it :D) -->
+    <nav>
+        <div class="nav-wrapper">
+            <a class="link" href="index.html" class="brand-logo"><i class="material-icons left">school</i>ListMaker</a>
+            <ul class="right">
+                <li><a class="link" href="index.html"><i class="material-icons left">home</i>Home</a></li>
+                <li><a class="link" href="list.html"><i class="material-icons left">list</i>My List</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Actual page content! -->
+    <div class="container">
+        <div class="section flow-text" id="details">
+            <h1>Item</h1>
+            <table>
+                <tr>
+                    <th>Title:</th>
+                    <td>Howl's Moving Castle</td>
+                </tr>
+                <tr>
+                    <th>Type:</th>
+                    <td>Movie</td>
+                </tr>
+                <tr>
+                    <th>Detailed Description:</th>
+                    <td>
+                        Watch with friends after half day!
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="controls">
+            <a class="btn-large waves-effect waves-light orange left modal-trigger" href="#edit">
+                <i class="material-icons right">edit</i>
+                Edit
+            </a>
+            <a class="btn-large waves-effect waves-light red right">
+                <i class="material-icons right">delete</i>
+                Delete
+            </a>
+        </div>
+
+
+        <div class="modal" id="edit">
+            <div class="modal-content">
+                <h3>Edit item:</h3>
+                <form id="updateForm">
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input type="text" id="titleInput" name="title" class="validate" data-length="45" required value="Textbook Assignment">
+                            <label for="titleInput">Title:</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <select type="number" id="subjectInput" name="subject">
+                                <option value="" disabled>Choose your type</option>
+                                <option value=1>Song</option>
+                                <option value=2 selected>Movie</option>
+                                <option value=3>Book</option>
+                              </select>
+                              <label for="subjectInput">Subject:</label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <textarea class="materialize-textarea" id="descriptionInput" name="description" data-length="150">Watch with friends after half day!</textarea>
+                            <label for="descriptionInput">Detailed Description:</label>
+                        </div>
+    
+                    </div>
+                </form>
+                <!-- A section for the footer of the modal -->
+                <div class="modal-footer">
+                    <!-- Since the submit button is not within the form, it must have the form attribute specified-->
+                    <button class="btn waves-effect waves-light " type="submit" form="updateForm">
+                        <i class="material-icons right">send</i>
+                        Submit
+                    </button>
+                    <button class="modal-close waves-effect waves-green btn-flat" >Never Mind</button>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Auto-initialize Materialize elements (Note - more specific initialization may be required for certain elements)-->
+    <script> M.AutoInit();</script>
+
+</body>
+
+</html>

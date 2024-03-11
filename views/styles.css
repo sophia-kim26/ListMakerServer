@@ -1,0 +1,13 @@
+body {
+    background-color: rgb(232, 252, 225);
+}
+* {
+    font-family: 'Inconsolata', monospace;
+}
+nav {
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+}
+.link {
+    color: black;
+}
