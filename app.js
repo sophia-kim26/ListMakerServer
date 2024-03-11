@@ -18,13 +18,13 @@ app.get( "/", ( req, res ) => {
     res.sendFile( __dirname + "/views/index.html" );
 } );
 
-// define a route for the assignment list page
-app.get( "/assignments", ( req, res ) => {
-    res.sendFile( __dirname + "/views/assignments.html" );
+// define a route for the main list page
+app.get( "/list", ( req, res ) => {
+    res.sendFile( __dirname + "/views/list.html" );
 } );
 
-// define a route for the assignment detail page
-app.get( "/assignments/details", ( req, res ) => {
+// define a route for the list detail page
+app.get( "/list/details", ( req, res ) => {
     res.sendFile( __dirname + "/views/details.html" );
 } );
 
