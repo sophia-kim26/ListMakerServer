@@ -2,13 +2,13 @@ const db = require("./db_connection");
 
 /**** Drop existing tables, if any ****/
 
-const drop_assignments_table_sql = "DROP TABLE IF EXISTS assignments;"
+const drop_type_table_sql = "DROP TABLE IF EXISTS type;"
 
-db.execute(drop_assignments_table_sql);
+db.execute(drop_type_table_sql);
 
-const drop_subjects_table_sql = "DROP TABLE IF EXISTS subjects;"
+const drop_item_table_sql = "DROP TABLE IF EXISTS item;"
 
-db.execute(drop_subjects_table_sql);
+db.execute(drop_item_table_sql);
 
 const create_type_table_sql = `
     CREATE TABLE type (
