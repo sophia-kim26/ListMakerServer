@@ -30,5 +30,4 @@ const create_item_table_sql = `
 `
 db.execute(create_item_table_sql);
 
-
 db.end();
