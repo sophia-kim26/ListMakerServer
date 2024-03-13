@@ -5,11 +5,11 @@ const mysql = require('mysql2');
 
 // TODO
 const dbConfig = {
-    host: "<hostname>",
+    host: "sqlclassdb-instance-1.cqjxl5z5vyvr.us-east-2.rds.amazonaws.com",
     port: 3306,
-    user: "<username>",
-    password: "<password>",
-    database: "<schema>",
+    user: "sopsyl",
+    password: "wXbVfbg4WL9F",
+    database: "ListMaker",
     connectTimeout: 10000
 }
 
