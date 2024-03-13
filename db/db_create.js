@@ -10,3 +10,7 @@ const drop_subjects_table_sql = "DROP TABLE IF EXISTS subjects;"
 
 db.execute(drop_subjects_table_sql);
 
+
+
+
+db.end();
