@@ -11,3 +11,9 @@ nav {
 .link {
     color: black;
 }
+
+li {
+    font-size: x-large;
+    font-style: italic;
+    list-style-type: circle;
+}
