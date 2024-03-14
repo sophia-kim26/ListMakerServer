@@ -38,9 +38,6 @@ li {
 .btn-small:hover{
     background-color: rgb(76, 140, 172);
 }
-.btn-small .red {
-    background-color: rgb(196, 121, 121);
-}
 
 .start {
     background-color: rgb(249, 249, 249);
