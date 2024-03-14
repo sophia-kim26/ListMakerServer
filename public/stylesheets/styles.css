@@ -13,7 +13,6 @@ nav {
 }
 
 li {
-    font-size: x-large;
     font-style: italic;
     list-style-type: circle;
 }
@@ -29,4 +28,23 @@ li {
 
 .column {
     flex-direction: column;
+}
+
+.btn-small {
+    background-color: rgb(122, 182, 212);
+    border-radius: 30px;
+    box-shadow: none;
+}
+.btn-small:hover{
+    background-color: rgb(76, 140, 172);
+}
+.btn-small .red {
+    background-color: rgb(196, 121, 121);
+}
+
+.start {
+    background-color: rgb(249, 249, 249);
+    border-radius: 30px;
+    padding: 10px;
+    margin: 30px;
 }
