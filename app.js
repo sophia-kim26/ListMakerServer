@@ -37,7 +37,7 @@ app.get( "/list/details", ( req, res ) => {
 } );
 
 // define a route for the create page
-app.get( "/create", ( req, res ) => {
+app.get("/create", ( req, res ) => {
     console.log("GET /create");
     res.sendFile( __dirname + "/views/create.html" );
 } );
