@@ -17,3 +17,16 @@ li {
     font-style: italic;
     list-style-type: circle;
 }
+
+.listimage {
+    border-radius: 30px;
+    margin: 30px;
+}
+
+.listsection {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
